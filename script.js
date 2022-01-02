@@ -5,11 +5,18 @@ var table = document.querySelector("table")
 // function length to show up the length of the string inputed
 var length = () => {return input.value.length}
 
+function nextStep(){
+}
+
 function addingElement(){
 	var text = input.value
 	var td = document.createElement("td")
 	var tr = document.createElement("tr")
+	var nextButton = document.createElement("button")
+	nextButton.innerHTML = "next column"
+
 	td.appendChild(document.createTextNode(text))
+	td.appendChild(nextButton)
 	tr.appendChild(td)
 	table.appendChild(tr)
 	input.value = ''
