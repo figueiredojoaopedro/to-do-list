@@ -3,7 +3,7 @@
   text-align: center;
   font-family: 'Oswald', Helvetica, sans-serif;
   font-size: 40px;
-  transform: skewY(-10deg);
+  transform: skewY(-5deg);
   letter-spacing: 4px;
   word-spacing: -8px;
   color: tomato;
@@ -21,13 +21,10 @@
 
 .done {
   text-decoration: line-through;
+  color: red;
 }
-table{
-  margin: 5rem 0;
-}
-table th,td{
-  text-align: center;
-  font-family: sans-serif;
-  border: 2px solid black;
-  margin: 0; padding: 25px 100px;
+li{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
 }

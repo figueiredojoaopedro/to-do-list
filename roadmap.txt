@@ -1,17 +1,3 @@
 what should i do?
 well, a to do list
 
-how i think i gonna do it?
-simple, i will make a table, because it's better to visualise, instead of a list that dont change the position.
-
-firstly, i think i got to make the table with three columns, called to do / doing / done
-
-now the table is created, i will make the logical part
-
-in the input, i need get the value of what had been written,
-
-well, what i did here, worked, but it's adding as a row, not in the column of only to do first
-
-now it's difficult to think how i gonna make the button to cancel in a simple way
-
-okay, i will make a next column button in which 

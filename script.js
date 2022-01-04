@@ -1,34 +1,47 @@
-var input = document.querySelector("#userinput")
 var button = document.querySelector("#enter")
-var table = document.querySelector("table")
+var enterInput = document.querySelector("#userinput")
+var ul = document.querySelector("ul")
+var list = document.querySelectorAll("li")
+var deleteButton = document.querySelectorAll(".part-of-list")
 
-// function length to show up the length of the string inputed
-var length = () => {return input.value.length}
+var lengthDetector = () => enterInput.value.length
 
-function nextStep(){
+
+var deleting = (event) => {
+
 }
 
-function addingElement(){
-	var text = input.value
-	var td = document.createElement("td")
-	var tr = document.createElement("tr")
-	var nextButton = document.createElement("button")
-	nextButton.innerHTML = "next column"
-
-	td.appendChild(document.createTextNode(text))
-	td.appendChild(nextButton)
-	tr.appendChild(td)
-	table.appendChild(tr)
-	input.value = ''
+function deleteButtonOnClick() {
+	for(var i = 0; i < deleteButton.length; i++){
+		deleteButton[i].addEventListener("click", deleting)
+	}
 }
-function checkingLength(){
-	if(length() > 0){
-		addingElement()
+
+function createLi() {
+	var text = enterInput.value
+	var div = document.createElement("div")
+	var li = document.createElement("li")
+	var buttonDel = document.createElement("button")
+	buttonDel.appendChild(document.createTextNode("Delete"))
+	li.appendChild(document.createTextNode(text))
+	li.appendChild(buttonDel)
+	div.appendChild(li)
+	div.classList.add("part-of-list")
+	ul.appendChild(div)
+	enterInput.value = ''
+}
+
+function addNewElement(){
+	if (lengthDetector() > 0){
+		createLi()
+		deleteButtonOnClick()
 	}
 	else{
-		alert("Please, enter a word with at least one letter.")
+		console.log("Not a string bro!")
+		alert("Could you input at least one letter?!")
 	}
 }
 
-// in case of the button being clicked, 
-button.addEventListener("click", checkingLength)
+
+
+button.addEventListener("click", addNewElement)
